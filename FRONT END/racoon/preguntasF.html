@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Toya</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="inicio_header">
+            <img class="logo" src="img/encuadre2.png">
+            <div class="box_buscar">
+                <input type="text" placeholder="Buscar..." class="texfile_buscar">
+                <button class="boton_busqueda">
+                    <i>Buscar</i>
+                </button>
+            </div>
+            <div class="box_login">
+                <button><a href="login.html">Iniciar Sesión</a></button>
+
+            </div>
+        </div>
+        
+        <div class="box_navegacion">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="productos.php">Productos</a>
+                <a href="sugerenciass.html">Sugerencias</a> <!--corregir el href-->
+                <a href="Nosotros.html">Nosotros</a> 
+            </nav>
+        </div>
+    </header>
+    
+    <main class="main_preguntasF">
+        <div class="box_preguntasF">
+            <fieldset>
+                <legend>Preguntas Frecuentes:</legend>
+                <div class="p_frecuentes">
+                    <h2 onclick="toggleAnswer(0)">¿Cuáles son los horarios de apertura de la pastelería?</h2>
+                    <p class="answer" style="display: none;">Nuestra pastelería abre de lunes a viernes de 8:00 AM a 7:00 PM, y los sábados de 9:00 AM a 5:00 PM.</p>
+                </div>
+                
+                <div class="p_frecuentes">
+                    <h2 onclick="toggleAnswer(1)">¿Ofrecen opciones sin gluten o sin lácteos?</h2>
+                    <p class="answer" style="display: none;">Sí, tenemos opciones sin gluten y sin lácteos en nuestro menú. Por favor, consulte nuestra sección de productos especiales.</p> 
+                </div><!-- comment -->
+                <div class="p_frecuentes">
+                    <h2 onclick="toggleAnswer(2)">¿Dónde se encuentra ubicada la pastelería Toya?</h2>
+                    <p class="answer" style="display: none;">Estamos ubicados en la siguiente dirección: [Dirección completa]. Puede encontrar un mapa de ubicación en nuestra página de contacto.</p> 
+                </div><!-- comment -->
+                <div class="p_frecuentes">
+                    <h2 onclick="toggleAnswer(3)">¿Ofrecen opciones veganas?</h2>
+                    <p class="answer" style="display: none;">Sí, también ofrecemos opciones veganas en nuestro menú. Nuestra variedad de productos veganos está disponible para satisfacer sus preferencias.</p>
+                </div><!-- comment -->
+                <div class="p_frecuentes">
+                    <h2 onclick="toggleAnswer(5)">¿Aceptan pedidos personalizados o para eventos especiales?</h2>
+                    <p class="answer" style="display: none;">Sí, aceptamos pedidos personalizados para eventos especiales. Por favor, contáctenos con anticipación para discutir sus necesidades y hacer un pedido especial.</p>
+                </div><!-- comment -->
+                <div class="p_frecuentes">
+                    <h2 onclick="toggleAnswer(6)">¿Cuál es la política de devolución o reembolso?</h2>
+                    <p class="answer" style="display: none;">Nuestra política de devolución y reembolso se basa en la satisfacción del cliente. Si no está satisfecho con su compra, comuníquese con nosotros dentro de [número de días] días y estaremos encantados de resolver el problema o procesar un reembolso según corresponda.</p>
+                </div><!-- comment -->
+                <div class="p_frecuentes">
+                    <h2 onclick="toggleAnswer(7)">¿Cómo puedo contactar con ustedes?</h2>
+                    <p class="answer" style="display: none;">Puede ponerse en contacto con nosotros a través de los siguientes medios:<br>
+                    - Teléfono: 9213123<br>
+                    - Correo Electrónico: ToyaDulceria@gmail.com<br>
+                </div>
+                <div class="p_frecuentes">
+                    <h2 onclick="toggleAnswer(8)">¿Aceptan pagos en línea o tarjetas de crédito?</h2>
+                    <p class="answer" style="display: none;">Sí, aceptamos pagos en línea y tarjetas de crédito para su conveniencia. Puede realizar su pago de forma segura a través de nuestro sitio web.</p>
+                </div>
+                <div class="p_frecuentes">
+                    <h2 onclick="toggleAnswer(9)">¿Cuáles son los productos más populares o recomendados?</h2>
+                    <p class="answer" style="display: none;">Algunos de nuestros productos más populares y recomendados incluyen [Cheesecake,Tiramisú,Tres Leches,Tarta de Santiago]. Estos son favoritos de nuestros clientes y definitivamente vale la pena probarlos.</p>
+                </div>
+                <div class="p_frecuentes">
+                    <h2 onclick="toggleAnswer(10)">¿Ofrecen opciones de catering para eventos?</h2>
+                    <p class="answer" style="display: none;">Sí, ofrecemos opciones de catering para eventos especiales. Por favor, comuníquese con nosotros para discutir los detalles y personalizar su pedido de catering según sus necesidades.</p>
+                </div>
+                <div class="p_frecuentes">
+                    <h2 onclick="toggleAnswer(11)">¿Tienen programas de lealtad o descuentos para clientes habituales?</h2>
+                    <p class="answer" style="display: none;">Sí, tenemos un programa de lealtad para nuestros clientes habituales. Obtenga más información en nuestra tienda o en línea para descubrir cómo puede disfrutar de descuentos y recompensas exclusivas.</p>
+                </div>
+                <div class="p_frecuentes">
+                    <h2 onclick="toggleAnswer(12)">¿Puedo realizar pedidos en línea para entrega a domicilio?</h2>
+                    <p class="answer" style="display: none;">Sí, puede realizar pedidos en línea para entrega a domicilio. Visite nuestra tienda en línea y siga las instrucciones para realizar su pedido y seleccionar la opción de entrega a domicilio.</p>
+                </div>
+                
+                
+            </fieldset>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="box_contacto">
+            <h3>Contáctanos</h3>
+            <p>Whatsapp: +54 221 614-7319</p>
+            <p>Instagram: @la.toya.dulces</p>
+            <p>GMAIL: toyasoosna03@gmail.com</p>
+        </div>
+    
+        <div class="box_ubicacion">
+            <h3>Ubicanos</h3>
+            <p><a href="https://www.google.com/maps/place/Parque+Saavedra/@-34.550819,-58.4798156,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcb696ab5cb4ed:0x887c745720a0e9b6!8m2!3d-34.550819!4d-58.4798156!16s%2Fg%2F12215d9x?entry=ttu">Plata, Argentina</a> </p>
+        </div>
+    
+        <div class="box_ayuda">
+            <h3>Ayuda</h3>
+            <p><a href="preguntasF.html">Preguntas Frecuentes</a></p>
+            <p><a href="libro_reclamaciones.html">Libro de Reclamaciones</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Coloca aquí el código JavaScript proporcionado
+        var questions = document.querySelectorAll(".p_frecuentes h1, .p_frecuentes h2");
+        var answers = document.querySelectorAll(".p_frecuentes .answer");
+
+        for (var i = 0; i < questions.length; i++) {
+            questions[i].addEventListener("click", function () {
+                var questionIndex = Array.from(questions).indexOf(this);
+
+                if (questionIndex >= 0 && questionIndex < answers.length) {
+                    answers.forEach(function (answer) {
+                        answer.style.display = "none";
+                    });
+
+                    answers[questionIndex].style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

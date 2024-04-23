@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racoon</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body class="box_body">
+    <header>
+        <div class="inicio_header">
+            <img class="logo" src="img/racoon/nuevologo.jpeg">
+            <div class="box_buscar">
+                <input type="text" placeholder="Buscar..." class="texfile_buscar">
+                <button class="boton_busqueda">
+                    <i>Buscar</i>
+                </button>
+            </div>
+            <div class="box_login">
+                <button><a href="login.html">Iniciar Sesión</a></button>
+            </div>
+        </div>
+        
+        <div class="box_navegacion">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="productos.php">Productos</a>
+                <a href="sugerenciass.html">Sugerencias</a> 
+                <a href="Nosotros.html">Nosotros</a> 
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <video class="video_portada"  autoplay loop muted>
+            <source src="videos/videohamburguesa.mp4" type="video/mp4">
+            <!-- Añade más sources según los formatos del video -->
+            Tu navegador no soporta el elemento de video.
+        </video>
+
+        <div class="Titulo_productos_destacados">
+            <h1>Productos destacados</h1>
+        </div>
+        
+        <div class="container my-4">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/racoon/hamburguesa1.jpg" class="d-block mx-auto w-50" alt="..."> <!-- Agregamos "mx-auto" para centrar horizontalmente -->
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/racoon/hamburguesa2.jpg" class="d-block mx-auto w-50" alt="..."> <!-- Agregamos "mx-auto" para centrar horizontalmente -->
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/racoon/hamburguesa3.jpg" class="d-block mx-auto w-50" alt="..."> <!-- Agregamos "mx-auto" para centrar horizontalmente -->
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/racoon/hamburguesa4.jpg" class="d-block mx-auto w-50" alt="..."> <!-- Agregamos "mx-auto" para centrar horizontalmente -->
+                  </div>
+                </div>
+                <button class="carousel-control-prev btn-carousel" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next btn-carousel" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous">
+        </script>
+
+    </main>
+
+    <footer class="footer">
+        <div class="box_contacto">
+            <h3>Contáctanos</h3>
+            <p>Whatsapp: +54 221 614-7319</p>
+            <p>Instagram: @la.toya.dulces</p>
+            <p>GMAIL: toyasoosna03@gmail.com</p>
+        </div>
+    
+        <div class="box_ubicacion">
+            <h3>Ubicanos</h3>
+            <p><a href="https://www.google.com/maps/place/Parque+Saavedra/@-34.550819,-58.4798156,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcb696ab5cb4ed:0x887c745720a0e9b6!8m2!3d-34.550819!4d-58.4798156!16s%2Fg%2F12215d9x?entry=ttu">Plata, Argentina</a> </p>
+        </div>
+    
+        <div class="box_ayuda">
+            <h3>Ayuda</h3>
+            <p><a href="preguntasF.html">Preguntas Frecuentes</a></p>
+            <p><a href="libro_reclamaciones.html">Libro de Reclamaciones</a></p>
+        </div>
+    </footer>
+</body>
+</html>

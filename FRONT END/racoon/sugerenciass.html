@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Toya</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body>
+    <header>
+        <div class="inicio_header">
+            <img class="logo" src="img/encuadre2.png">
+            <div class="box_buscar">
+                <input type="text" placeholder="Buscar..." class="texfile_buscar">
+                <button class="boton_busqueda">
+                    <i>Buscar</i>
+                </button>
+            </div>
+            <div class="box_login">
+                <button><a href="login.html">Iniciar Sesión</a></button>
+
+            </div>
+        </div>
+        
+        <div class="box_navegacion">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="productos.php">Productos</a>
+                <a href="sugerenciass.html">Sugerencias</a> <!--corregir el href-->
+                <a href="Nosotros.html">Nosotros</a> 
+            </nav>
+        </div>
+    </header>
+    
+    <main class="main_sugerencias"><!-- ACTION ESPECIFICA LA URL DEL SERVIDOR   tipos de metodos post y get      -->
+        <form class="box_sugerencias"  action="Cphpimg.php"  method="post" enctype="multipart/form-data"  type="submit"> <!-- Formulario de sugerencias -->
+            <fieldset>
+                <fieldset>
+                    <legend>Contacto</legend>
+                    <label>Nombre</label>
+                    <input type="text" name="txtNombres" placeholder="Ingrese su nombre" required/>
+                    <label>Correo Electrónico</label>
+                    <input type="text" name="txtEmail" placeholder="E-mail" required/>
+                    <label>Teléfono celular</label>
+                    <input type="text" name="txtTlfCelular" placeholder="Teléfono celular" maxlength="9" pattern="[0-9]+" required/>
+                </fieldset>
+                <fieldset>
+                    <legend>Detalle</legend>
+                    <label>Tipo de sugerencia</label>
+                    <select name="cbxTipoSuge">
+                        <option value="mejora">Mejora del Servicio</option>
+                        <option value="funciones">Nueva Funcionalidad</option>
+                        <option value="problemTecnico">Problema Técnico</option>
+                        <option value="Comentario">Comentario General</option>
+                        <option value="Producto">Sugerencia de Producto</option><!-- comment -->
+                        <option value="Experiencia">Compartir experiencia con La Toya Dulces</option>
+                        <option value="third">Otro</option>
+                    
+                    </select>
+
+                    <label>Descripción de la sugerencia</label>
+                    <textarea name="txtDescripcion" rows="5" cols="80" required pattern=".*\S.*"> </textarea>
+                    <input type="file" name="imagen" id="imagen" accept=".jpg, .png"
+                        onchange="mostrarImagenSeleccionada(this)"/> <!-- metodo para mostrar la imagen seleccionada -->
+                        <img id="imagenMostrada" src=""  alt="Imagen mostrada" style="max-width: 100%;
+                        max-height: 300px;">
+
+                </fieldset>
+            </fieldset>
+            <input type="submit" name="btnEnviar" value="Enviar"/>
+        </form>
+    </main>
+
+    <div class="modal" id="modalExito" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">FORMULARIO ENVIADO</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>ENVIO EXITOSO</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <footer class="footer">
+        <div class="box_contacto">
+            <h3>Contáctanos</h3>
+            <p>Whatsapp: +54 221 614-7319</p>
+            <p>Instagram: @la.toya.dulces</p>
+            <p>GMAIL: toyasoosna03@gmail.com</p>
+        </div>
+    
+        <div class="box_ubicacion">
+            <h3>Ubicanos</h3>
+            <p><a href="https://www.google.com/maps/place/Parque+Saavedra/@-34.550819,-58.4798156,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcb696ab5cb4ed:0x887c745720a0e9b6!8m2!3d-34.550819!4d-58.4798156!16s%2Fg%2F12215d9x?entry=ttu">Plata, Argentina</a> </p>
+        </div>
+    
+        <div class="box_ayuda">
+            <h3>Ayuda</h3>
+            <p><a href="preguntasF.html">Preguntas Frecuentes</a></p>
+            <p><a href="libro_reclamaciones.html">Libro de Reclamaciones</a></p>
+        </div>
+    </footer>
+</body>
+<script>
+    // Esta función se llama cuando el usuario selecciona un archivo en el elemento de entrada de archivo.
+    function mostrarImagenSeleccionada(input) {
+        // Obtener el elemento de imagen donde se mostrará la imagen seleccionada.
+        const imagenMostrada = document.getElementById('imagenMostrada');
+
+        // Comprobar si se ha seleccionado un archivo y si es una imagen (JPEG o PNG).
+        if (input.files && input.files[0]) {
+            // Obtener el archivo seleccionado.
+            const archivoSeleccionado = input.files[0];
+
+            // Verificar si el tipo de archivo es una imagen JPEG o PNG.
+            if (archivoSeleccionado.type === 'image/jpeg' || archivoSeleccionado.type === 'image/png') {
+                // Crear un lector de archivos.
+                const lector = new FileReader();
+
+                // Definir un evento que se activará cuando la lectura del archivo esté completa.
+                lector.onload = function (e) {
+                    // Establecer la fuente de la imagen para mostrar la imagen seleccionada.
+                    imagenMostrada.src = e.target.result;
+                };
+
+                // Iniciar la lectura del archivo seleccionado como una URL de datos.
+                lector.readAsDataURL(archivoSeleccionado);
+            } else {
+                // Mostrar una alerta si el archivo no es una imagen JPEG o PNG válida.
+                alert('Por favor, seleccione un archivo JPG o PNG válido');
+                // Restablecer el valor del elemento de entrada de archivo y vaciar la imagen mostrada.
+                input.value = '';
+                imagenMostrada.src = '';
+            }
+        } else {
+            // Vaciar la imagen mostrada si no se ha seleccionado ningún archivo.
+            imagenMostrada.src = '';
+        }
+    }
+</script>

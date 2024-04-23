@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Toya</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="inicio_header">
+            <img class="logo" src="img/encuadre2.png">
+            <div class="box_buscar">
+                <input type="text" placeholder="Buscar..." class="texfile_buscar">
+                <button class="boton_busqueda">
+                    <i>Buscar</i>
+                </button>
+            </div>
+            <div class="box_login">
+                <button><a href="login.html">Iniciar Sesión</a></button>
+
+            </div>
+        </div>
+        
+        <div class="box_navegacion">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="productos.php">Productos</a>
+                <a href="sugerenciass.html">Sugerencias</a> <!--corregir el href-->
+                <a href="Nosotros.html">Nosotros</a> 
+            </nav>
+        </div>
+    </header>
+    
+    <main class="main_libroR">
+        <div class="box_libroR">
+            <form  action="Libro_php.php"  method="post" enctype="multipart/form-data"> <!-- Formulario -->
+                <fieldset> <!-- Agrupa los campos -->
+                    <fieldset> <!-- Campo de Datos del establecimiento -->
+                        <legend>Datos del establecimiento</legend> <!-- Titulo -->
+                        <label> La Toya Dulces   </label>
+                        <label> La Plata, Buenos Aires   </label>
+                        <label> RUC  </label> <!-- CORREGIR AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII -->
+                    </fieldset>
+                    
+                    <fieldset> <!-- ¿Quie presenta el reclamo? -->
+                        <legend>¿Quién presenta el reclamo?</legend>
+                        <label for="may">Soy mayor de edad</label>
+                        <input type="radio" id="may" name="edad" value="Mayor" checked/>
+                        <label for="men">Soy menor de edad</label>
+                        <input type="radio" id="men" name="edad" value="Menor" checked/>
+                    </fieldset>
+                    
+                    <fieldset> <!-- Datos de la persona que presenta el reclamo -->
+                        <legend>Identificación del consumidor reclamante</legend>
+                        <label>Tipo de documento</label>
+                        <select name="cbxTipoDoc">
+                            <option value="dni">DNI</option>
+                            <option value="pas">Pasaporte</option>
+                            <option value="car">Carnet de Extranjería</option>
+                        </select>
+                        <label>Número de documento</label>
+                        <input type="text" name="txtNDoc" placeholder="Ingrese su número de documento" maxlength="9" pattern="[0-9]+" required/> 
+                        <label>Nombre</label>
+                        <input type="text" name="txtNombre" placeholder="Ingrese su nombre" required/>
+                        <label>Apellidos</label>
+                        <input type="text" name="txtApellidos" placeholder="Ingrese sus apellidos" required/>
+                        <label>Tipo de respuesta</label>
+                        <select name="cbxTipoRespuesta">
+                            <option value="first">Correo Electrónico</option>
+                            <option value="second">Dirección domiciliaría</option>
+                        </select>
+                        <label>E-mail</label>
+                        <input type="text" name="txtEmail" placeholder="Correo Electrónico" required>
+                        <label>Dirección</label>
+                        <input type="text" name="txtDireccion" placeholder="Ingrese su dirección" required>
+                        <label>Teléfono fijo</label>
+                        <input type="text" name="txtTlfFijo" placeholder="Teléfono fijo" maxlength="7" pattern="[0-7]+" required/>
+                        <label>Teléfono celular</label>
+                        <input type="text" name="txtTlfCelular" placeholder="Teléfono celular" maxlength="9" pattern="[0-9]+" required/>
+                        <label>Departamento</label>
+                        <select name="cbxDepartamento">
+                            <option value="BuenosAires">Buenos Aires</option>
+                            <option value="Chaco">Chaco</option>
+                            <option value="Chubut">Chubut</option>
+                            <option value="Córdoba">Córdoba</option>
+                            <option value="Corriente">Corriente</option><!-- comment -->
+                            <option value="EntreRios">Entre Ríos</option>
+                            <option value="Formosa">Formosa</option>
+                            <option value="Mendoza">Mendoza</option>
+                        </select>
+                        <label>Provincia</label>
+                        <input type="text" name="txtProvincia" placeholder="Provincia" required/>
+                    </fieldset>
+                    
+                    <fieldset> <!-- Identificación del bien contratado -->
+                        <legend>Identificación del bien contratado</legend>
+                        <label>Tipo</label>
+                        <select name="cbxTipoBien">
+                            <option value="prod">Producto</option>
+                            <option value="serv">Servicio</option>
+                        </select>
+                        <label>Número de boleta/factura</label>
+                        <input type="text" name="txt" placeholder="N° de boleta/factura"/>
+                        <label>Fecha de compra</label>
+                        <input type="date" name="fechaCompra" required/>
+                        <label>Monto Reclamado</label>
+                        <input type="text" name="txtmonto" placeholder="Monto reclamado" required/>
+                        <label>Descripción del producto</label>
+                        <textarea name="txtDescripcion" rows="5" cols="80" required pattern=".*\S.*"> </textarea>
+                    </fieldset>
+                    
+                    <fieldset> <!-- Detalles de su reclamo -->
+                        <legend>Detalles de su reclamo</legend>
+                        <label>Tipo</label>
+                        <select name="cbxTipoReclamo">
+                            <option value="recla">Reclamo</option>
+                            <option value="quej">Queja</option>
+                        </select>
+                        <label>Detalle de la Queja/Reclamo</label>
+                        <textarea name="txtDetalle" rows="5" cols="80" required pattern=".*\S.*"></textarea>
+                        <label>Pedido</label>
+                        <textarea name="txtPedido" rows="5" cols="80" required pattern=".*\S.*"></textarea>
+                        <input type="file" name="imagen" id="imagen" accept=".jpg, .png"
+                        onchange="mostrarImagenSeleccionada(this)"/> <!-- metodo para mostrar la imagen seleccionada -->
+                        <img id="imagenMostrada" src=""  alt="Imagen mostrada" style="max-width: 100%;
+                        max-height: 300px;">
+
+                    </fieldset>
+                </fieldset>
+                <input type="submit"
+                                        name="btnEnviarLibro"
+                                        value="Enviar"/>
+            </form>
+        </div>
+    </main>
+    <script>
+        function mostrarImagenSeleccionada(input) {
+            const imagenMostrada = document.getElementById('imagenMostrada');
+            if (input.files && input.files[0]) {
+                const archivoSeleccionado = input.files[0];
+                if (archivoSeleccionado.type === 'image/jpeg' || archivoSeleccionado.type === 'image/png') {
+                    const lector = new FileReader();
+    
+                    lector.onload = function (e) {
+                        imagenMostrada.src = e.target.result;
+                    };
+                    lector.readAsDataURL(archivoSeleccionado); // Corregido aquí
+                } else {
+                    alert('Por favor, seleccione un archivo JPG o PNG válido');
+                    input.value = '';
+                    imagenMostrada.src = '';
+                }
+            } else {
+                imagenMostrada.src = '';
+            }
+        }
+    </script>
+    <script>
+        function mostrarImagenSeleccionada(input) {
+            const imagenMostrada = document.getElementById('imagenMostrada');
+            if (input.files && input.files[0]) {
+                const archivoSeleccionado = input.files[0];
+                if (archivoSeleccionado.type === 'image/jpeg' || archivoSeleccionado.type === 'image/png') {
+                    const lector = new FileReader();
+    
+                    lector.onload = function (e) {
+                        imagenMostrada.src = e.target.result;
+                    };
+                    lector.readAsDataURL(archivoSeleccionado); // Aquí está la corrección
+                } else {
+                    alert('Por favor, seleccione un archivo JPG o PNG válido');
+                    input.value = '';
+                    imagenMostrada.src = '';
+                }
+            } else {
+                imagenMostrada.src = '';
+            }
+        }
+    </script>
+    <footer class="footer">
+        <div class="box_contacto">
+            <h3>Contáctanos</h3>
+            <p>Whatsapp: +54 221 614-7319</p>
+            <p>Instagram: @la.toya.dulces</p>
+            <p>GMAIL: toyasoosna03@gmail.com</p>
+        </div>
+    
+        <div class="box_ubicacion">
+            <h3>Ubicanos</h3>
+            <p><a href="https://www.google.com/maps/place/Parque+Saavedra/@-34.550819,-58.4798156,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcb696ab5cb4ed:0x887c745720a0e9b6!8m2!3d-34.550819!4d-58.4798156!16s%2Fg%2F12215d9x?entry=ttu">Plata, Argentina</a> </p>
+        </div>
+    
+        <div class="box_ayuda">
+            <h3>Ayuda</h3>
+            <p><a href="preguntasF.html">Preguntas Frecuentes</a></p>
+            <p><a href="libro_reclamaciones.html">Libro de Reclamaciones</a></p>
+        </div>
+    </footer>
+</body>
+</html>
