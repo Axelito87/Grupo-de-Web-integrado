@@ -1,0 +1,126 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #e32929, #f9b438);
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    box-shadow: 0 5px 10px rgba(71, 3, 6, 0.7);
+}
+
+/* Contenedores de formularios */
+.form-container {
+    flex: 1;
+    padding: 20px 25px;
+    background-color: #fff;
+}
+
+.left {
+    background-color: #f0f0f0;
+}
+
+.right {
+    background-color: #e0e0e0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+form .title {
+    color: #252525;
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+form label {
+    margin-bottom: 15px;
+    display: block;
+    text-align: left;
+}
+
+form label input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    color: #fff;
+    border: none;
+    background: linear-gradient(to right, #e32929, #f9b438);
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background: linear-gradient(to right, #d92626, #e69929);
+}
+
+/* Estilos para la tabla */
+form table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+form table, form th, form td {
+    border: 1px solid #ddd;
+}
+
+form th, form td {
+    padding: 8px;
+    text-align: left;
+}
+
+form th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos específicos para la imagen de mapache admin */
+#mapacheAdmin {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+}
+
+/* Estilos adicionales para los botones de la izquierda */
+#leftForm button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #e32929;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+#leftForm button:hover {
+    background-color: #d92626;
+}
