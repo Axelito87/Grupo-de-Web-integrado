@@ -9,13 +9,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-       <%-- 
-    
+       
+    <%-- 
        <jsp:include page="inic/head.jsp" />
 --%>
         <title>Management App web</title>
     </head>
     <body style="background-color: black">
         <jsp:include page="Login/Login.jsp" />
+        
     </body>
 </html>

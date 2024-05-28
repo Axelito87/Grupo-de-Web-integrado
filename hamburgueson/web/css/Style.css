@@ -1,0 +1,82 @@
+
+* {
+    margin: 0; /* Quitar márgenes */
+    padding: 0; /* Quitar relleno */
+    box-sizing: border-box; /* Incluir el relleno y borde en el cálculo del ancho y alto de los elementos */
+    font-family: sans-serif; /* Establecer la fuente a sans-serif para todo el documento */
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+    display: flex; /* Utilizar un layout flexbox */
+    align-items: center; /* Alinear verticalmente los elementos al centro */
+    justify-content: center; /* Alinear horizontalmente los elementos al centro */
+    min-height: 100vh; /* Establecer una altura mínima de 100% de la ventana gráfica */
+    background: linear-gradient(to right, #e32929, #f9b438); /* Aplicar un fondo con degradado de rojo a amarillo */
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex; /* Utilizar un layout flexbox */
+    flex-direction: column; /* Colocar los elementos en columna */
+    background-color: #fff; /* Fondo blanco */
+    text-align: center; /* Centrarse el texto */
+    padding: 20px 25px; /* Espaciado interno del formulario */
+    box-shadow: 0 5px 10px rgba(71, 3, 6, 0.7); /* Sombra alrededor del formulario */
+}
+
+/* Estilos para el título del formulario */
+form .title {
+    color: #252525; /* Color del texto gris oscuro */
+    font-size: 35px; /* Tamaño de la fuente grande */
+    font-weight: 800; /* Texto en negrita */
+    margin-bottom: 30px; /* Espaciado inferior */
+}
+
+/* Estilos para las etiquetas de los campos */
+form label {
+    margin-bottom: 35px; /* Espaciado inferior grande */
+}
+
+/* Estilos para los iconos dentro de las etiquetas */
+form label .fa-solid {
+    font-size: 20px; /* Tamaño de la fuente de los iconos */
+    color: #e32929; /* Color rojo */
+    margin-right: 10px; /* Espaciado derecho entre el icono y el campo de entrada */
+}
+
+/* Estilos para los campos de entrada */
+form label input {
+    outline: none; /* Quitar el contorno del campo cuando está enfocado */
+    border: none; /* Quitar el borde predeterminado */
+    color: #252525; /* Color del texto gris oscuro */
+    border-bottom: solid 1px #e32929; /* Borde inferior rojo */
+    padding: 0 5px; /* Espaciado interno horizontal */
+    font-size: 18px; /* Tamaño de la fuente mediano */
+}
+
+/* Estilos para el texto del placeholder en los campos de entrada */
+form label input::placeholder {
+    color: rgba(37, 37, 37, 0.5); /* Color gris claro y semi-transparente para el placeholder */
+}
+
+/* Estilos para el enlace */
+form .link {
+    color: #252525; /* Color del texto gris oscuro */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+/* Estilos para el botón */
+form button {
+    color: #fff; /* Color del texto blanco */
+    border: none; /* Quitar el borde predeterminado */
+    background: linear-gradient(to right, #e32929, #f9b438); /* Fondo con degradado de rojo a amarillo */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar el cursor al estilo de puntero */
+    font-size: 20px; /* Tamaño de la fuente mediano */
+}
+
+/* Estilos para la imagen */
+form img {
+    margin-bottom: 10px; /* Espaciado inferior */
+}
